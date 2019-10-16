@@ -1,6 +1,8 @@
-# engshaper README
+# engshaper
 
-This is an extension that shapes English for Google Translate.
+An extension that shapes English for Google Translate.
+
+![engshaper demo movie](demo.gif "demo")
 
 ## Features
 
@@ -14,10 +16,10 @@ Run `Shape English for Google Translate` from command palette.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+TBC
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release
