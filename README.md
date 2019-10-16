@@ -1,6 +1,6 @@
 # engshaper
 
-An extension that shapes English for Google Translate.
+VSCode extension that shapes English for Google Translate.
 
 ![engshaper demo movie](demo.gif "demo")
 
