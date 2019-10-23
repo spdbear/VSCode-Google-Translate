@@ -35,6 +35,7 @@ export function activate(context: vscode.ExtensionContext) {
       /**
        * ここでテキストを加工します。
        **/
+      text = text.replace(/\r\n/g,"\n"); // CRLFの場合にはLFに変換して処理を行う
       text = text
         .split("\n") // 改行を除去
         .map(elem => (elem === "" ? "\n\n" : elem)) // 改行のみの行は残す
