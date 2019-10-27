@@ -20,13 +20,16 @@ export async function doTranslate(text: string): Promise<string> {
     }
   };
 
-  request.post(option, function(error : object, response : any, body : string) {
-    if (error) {
-      reject(error);
-    } else {
-      resolve(body);
+  request.post(
+    option, 
+    (error : object, response : any, body : string) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(body);
+      }
     }
-  });
+  );
 
   });
 }
@@ -109,13 +112,12 @@ export async function activate(context: vscode.ExtensionContext) {
       try {
         let translated = await doTranslate(text);
         text = translated;
-
         vscode.window.showInformationMessage("Translated and shaped!");
       } catch (err) {
         vscode.window.showInformationMessage("Failed to translate. only shaped.");
       }
       
-      //エディタ選択範囲にテキストを反映
+      // エディタ選択範囲にテキストを反映
       editor.edit(edit => {
         edit.replace(cur_selection, text);
       });
