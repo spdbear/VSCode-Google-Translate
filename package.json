@@ -44,13 +44,16 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.21",
     "@types/vscode": "^1.39.0",
+    "generator-code": "^1.2.7",
     "glob": "^7.1.4",
     "mocha": "^6.1.4",
-    "typescript": "^3.3.1",
     "tslint": "^5.12.1",
-    "vscode-test": "^1.2.0"
+    "typescript": "^3.3.1",
+    "vsce": "^1.68.0",
+    "vscode-test": "^1.2.0",
+    "yo": "^3.1.0"
   },
   "dependencies": {
-    "vsce": "^1.67.1"
+    "request": "^2.88.0"
   }
 }
