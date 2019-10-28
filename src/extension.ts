@@ -9,7 +9,7 @@ export async function doTranslate(text: string): Promise<string> {
   return new Promise<string>((resolve, reject) => {
   
   const option = {
-    uri: "https://script.google.com/macros/s/AKfycbyCl1i6R5VVdzJ4NO4ydpizaa27K9JS_6JZTTDMd9w9WnuJFeM/exec",
+    uri: "https://script.google.com/macros/s/AKfycbzm_9ytCpltZEvCMvDkYwbvSEJDQysKiZ58Vi7OdXFHpA3zfsY/exec",
     headers: {
       "Content-Type": "application/x-www-form-urlencode"
     },
