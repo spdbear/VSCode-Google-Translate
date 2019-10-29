@@ -15,20 +15,29 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.engShaper"
+    "onCommand:extension.shape",
+    "onCommand:extension.shapeAndTranslate"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.engShaper",
-        "title": "Shape English for Google Translate"
+        "command": "extension.shape",
+        "title": "engshaper: Shape Text"
+      },
+      {
+        "command": "extension.shapeAndTranslate",
+        "title": "engshaper: Shape & Translate"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.engShaper",
+        "command": "extension.shape",
         "key": "ctrl+s ctrl+p"
+      },
+      {
+        "command": "extension.shapeAndTranslate",
+        "key": "ctrl+s ctrl+t"
       }
     ]
   },
