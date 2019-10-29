@@ -1,36 +1,11 @@
-const request = require("request");
-
-const API_URL = "https://script.google.com/macros/s/AKfycbzm_9ytCpltZEvCMvDkYwbvSEJDQysKiZ58Vi7OdXFHpA3zfsY/exec";
-
-  // Google App Script を利用した Google 翻訳
+const translate = require("@vitalets/google-translate-api");
 
 module.exports = {
   async doTranslate(text: string): Promise<string> {
-    return new Promise<string>((resolve, reject) => {
-    
-    const option = {
-      uri: API_URL,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencode"
-      },
-      followAllRedirects: true,
-      form: {
-        text: text,
-        target: "ja"
-      }
-    };
-  
-    request.post(
-      option, 
-      (error : object, response : any, body : string) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(body);
-        }
-      }
-    );
-  
+    return new Promise((resolve, reject) => {
+      translate(text, {to: "ja"}).then(
+        (translated: any) => resolve(translated.text)
+      ).catch((err: any) => reject(err));
     });
   }
 };
